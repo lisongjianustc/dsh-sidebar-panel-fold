@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+*.tmp
+
+# Runtime preference written by the Host (lives under ~/.dsh, never in a checkout).
+visible-panels.json

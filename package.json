@@ -1,0 +1,50 @@
+{
+  "name": "@lisongjianustc/dsh-sidebar-panel-fold",
+  "version": "1.2.0",
+  "description": "Keeps the global panels you choose in the DeepSeek Harness sidebar and folds the rest into its More menu.",
+  "type": "module",
+  "license": "MIT",
+  "author": "lisongjian",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lisongjianustc/dsh-sidebar-panel-fold"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "sidebar",
+    "panel"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.2-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
